@@ -167,6 +167,10 @@ IF (UNIX)
 ENDIF()
 
 # Needed libraries - topologically sorted
+SET(UTILS_NEEDED_LIBS utilslib)
+
+SET(LEETCODE_NEEDED_LIBS leetcodelib ${UTILS_NEEDED_LIBS})
+#MESSAGE("LEETCODE_NEEDED_LIBS=${LEETCODE_NEEDED_LIBS}")
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)

@@ -8,7 +8,16 @@
 #ifndef LEETCODE_FWD_H_
 #define LEETCODE_FWD_H_
 
-#include <stdlib.h>
 #include <assert.h>
+#include <stdlib.h>
+#include <vector>
+
+#include "utils/log.h"
+#include "leetcode/leetutils.h"
+
+using std::vector;
+using std::cout;
+using std::endl;
+using namespace leetcode;
 
 #endif /* LEETCODE_FWD_H_ */
