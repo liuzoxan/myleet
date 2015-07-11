@@ -18,7 +18,7 @@ MESSAGE("GIT_VERSION=${GIT_VERSION}")
 ADD_DEFINITIONS(-DGIT_VERSION=${GIT_VERSION})
 
 EXECUTE_PROCESS(
-    COMMAND "${testrepo_SOURCE_DIR}/script/get_version_major.sh"
+    COMMAND "${myleet_SOURCE_DIR}/script/get_version_major.sh"
     WORKING_DIRECTORY ${myleet_SOURCE_DIR}
     OUTPUT_VARIABLE _VERSION_MAJOR
     OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -170,11 +170,13 @@ ENDIF()
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)
+INCLUDE_DIRECTORIES(utils/include)
 # Includes, please keep sorted
 
 # Applications, please keep sorted
 ADD_SUBDIRECTORY(hello)
 ADD_SUBDIRECTORY(helloc)
 ADD_SUBDIRECTORY(leetcode)
+ADD_SUBDIRECTORY(utils)
 # Applications, please keep sorted
 
