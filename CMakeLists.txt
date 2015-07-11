@@ -170,6 +170,7 @@ ENDIF()
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)
+INCLUDE_DIRECTORIES(leetcode/include)
 INCLUDE_DIRECTORIES(utils/include)
 # Includes, please keep sorted
 

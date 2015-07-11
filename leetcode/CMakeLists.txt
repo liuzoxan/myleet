@@ -10,3 +10,4 @@
 #SET(HELLO_NEEDED_LIBS hellolib)
 
 ADD_EXECUTABLE(leet app/leet.cpp)
+ADD_EXECUTABLE(reverse_integer app/reverse_integer.cpp)
