@@ -10,6 +10,7 @@
 #include <cppunit/CompilerOutputter.h>
 #include <cppunit/XmlOutputter.h>
 
+#include <stdlib.h>
 #include "hello/hello.h"
 
 // Namespaces.
