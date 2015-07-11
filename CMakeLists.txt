@@ -175,5 +175,6 @@ INCLUDE_DIRECTORIES(hello/include)
 # Applications, please keep sorted
 ADD_SUBDIRECTORY(hello)
 ADD_SUBDIRECTORY(helloc)
+ADD_SUBDIRECTORY(leetcode)
 # Applications, please keep sorted
 
