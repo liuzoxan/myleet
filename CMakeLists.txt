@@ -115,7 +115,7 @@ IF (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" S
 
     SET(_DEF_FLAGS "-fmessage-length=0 -pthread -Wall -Wextra -Waddress -Wchar-subscripts -Wcomment -Wempty-body")
     SET(_DEF_FLAGS "-Wmissing-braces -Wreturn-type -Wtrigraphs -Wtype-limits -Wunused-value")
-    SET(_DEF_FLAGS "${_DEF_FLAGS} -Werror")
+    SET(_DEF_FLAGS "${_DEF_FLAGS} -Werror -L /lib64 -l pthread")
     SET(CMAKE_C_FLAGS             "${CMAKE_C_FLAGS}   ${_DEF_FLAGS}")
     SET(CMAKE_CXX_FLAGS           "${CMAKE_CXX_FLAGS} ${_DEF_FLAGS} -std=c++0x -Wnon-virtual-dtor -Wctor-dtor-privacy")
 

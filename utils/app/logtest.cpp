@@ -1,10 +1,3 @@
-/*
- * logtest.cpp
- *
- *  Created on: Jul 11, 2015
- *      Author: zxliu
- */
-
 #include <iostream>
 #include <fstream>
 #include <stdarg.h>

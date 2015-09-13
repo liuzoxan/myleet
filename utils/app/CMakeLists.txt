@@ -1,6 +1,22 @@
-# apps or test
+ADD_EXECUTABLE(basichash basichash.cpp)
+ADD_EXECUTABLE(demon demon.cpp)
+ADD_EXECUTABLE(dupdup2 dupdup2.cpp)
+ADD_EXECUTABLE(execv execv.cpp)
+ADD_EXECUTABLE(httpstatus httpstatus.cpp)
+ADD_EXECUTABLE(getopt getopt.cpp)
+ADD_EXECUTABLE(memmove memmove.cpp)
+ADD_EXECUTABLE(newdelete newdelete.cpp)
+ADD_EXECUTABLE(packed packed.cpp)
+TARGET_LINK_LIBRARIES(packed ${UTILS_NEEDED_LIBS})
 
-ADD_EXECUTABLE(valist valist.cpp)
+ADD_EXECUTABLE(pipefds pipefds.cpp)
+ADD_EXECUTABLE(stringstream stringstream.cpp)
+ADD_EXECUTABLE(stltraits stltraits.cpp)
+ADD_EXECUTABLE(testepoll testepoll.cpp)
+TARGET_LINK_LIBRARIES(testepoll ${UTILS_NEEDED_LIBS})
 
-ADD_EXECUTABLE(logtest logtest.cpp)
-TARGET_LINK_LIBRARIES(logtest ${UTILS_NEEDED_LIBS})
+ADD_EXECUTABLE(threads threads.cpp)
+TARGET_LINK_LIBRARIES(threads ${UTILS_NEEDED_LIBS})
+
+ADD_EXECUTABLE(waitpid waitpid.cpp)
+TARGET_LINK_LIBRARIES(waitpid ${UTILS_NEEDED_LIBS})

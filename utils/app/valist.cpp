@@ -1,10 +1,3 @@
-/*
- * valist.cpp
- *
- *  Created on: Jul 11, 2015
- *      Author: zxliu
- */
-
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
