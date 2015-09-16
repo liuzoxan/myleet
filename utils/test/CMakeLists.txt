@@ -17,3 +17,8 @@ ADD_TEST(sync_test ${EXECUTABLE_OUTPUT_PATH}/sync_test)
 ADD_EXECUTABLE(timestamp_test timestamp_test.cpp)
 TARGET_LINK_LIBRARIES(timestamp_test ${UTILS_NEEDED_LIBS} ${CPPUNIT_LIBRARIES})
 ADD_TEST(timestamp_test ${EXECUTABLE_OUTPUT_PATH}/timestamp_test)
+
+ADD_EXECUTABLE(pidfile_test pidfile_test.cpp)
+TARGET_LINK_LIBRARIES(pidfile_test ${UTILS_NEEDED_LIBS} ${CPPUNIT_LIBRARIES})
+ADD_TEST(pidfile_test ${EXECUTABLE_OUTPUT_PATH}/pidfile_test)
+
