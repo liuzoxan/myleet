@@ -155,7 +155,12 @@ ELSE (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}"
 ENDIF (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang"))
 
 # Find all third party packages
+FIND_PACKAGE(Boost REQUIRED)
 FIND_PACKAGE(CppUnit) # REQUIRED) # Can compile without unit tests, right?
+FIND_PACKAGE(LibConfig REQUIRED) # For learning :-)
+# FIND_PACKAGE(Log4cplus REQUIRED) # For learning :-)
+FIND_PACKAGE(Mongo REQUIRED)
+FIND_PACKAGE(Thrift REQUIRED)
 
 # Enable testing
 ENABLE_TESTING()
@@ -168,19 +173,22 @@ ENDIF()
 
 # Needed libraries - topologically sorted
 SET(UTILS_NEEDED_LIBS utilslib)
-
 SET(LEETCODE_NEEDED_LIBS leetcodelib ${UTILS_NEEDED_LIBS})
 #MESSAGE("LEETCODE_NEEDED_LIBS=${LEETCODE_NEEDED_LIBS}")
+SET(MONGODB_NEEDED_LIBS mongodblib ${MONGO_LIBRARIES} ${BOOST_LIBRARIES})
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)
 INCLUDE_DIRECTORIES(leetcode/include)
+INCLUDE_DIRECTORIES(hellomongodb/include)
 INCLUDE_DIRECTORIES(utils/include)
 # Includes, please keep sorted
 
 # Applications, please keep sorted
 ADD_SUBDIRECTORY(hello)
 ADD_SUBDIRECTORY(helloc)
+ADD_SUBDIRECTORY(hellolibconfig)
+ADD_SUBDIRECTORY(hellomongodb)
 ADD_SUBDIRECTORY(leetcode)
 ADD_SUBDIRECTORY(utils)
 # Applications, please keep sorted
