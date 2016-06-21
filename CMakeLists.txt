@@ -158,7 +158,7 @@ ENDIF (("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") OR ("${CMAKE_CXX_COMPILER_ID}
 FIND_PACKAGE(Boost REQUIRED)
 FIND_PACKAGE(CppUnit) # REQUIRED) # Can compile without unit tests, right?
 FIND_PACKAGE(LibConfig REQUIRED) # For learning :-)
-# FIND_PACKAGE(Log4cplus REQUIRED) # For learning :-)
+FIND_PACKAGE(Log4cplus REQUIRED) # For learning :-)
 FIND_PACKAGE(Mongo REQUIRED)
 FIND_PACKAGE(Thrift REQUIRED)
 
@@ -179,8 +179,8 @@ SET(MONGODB_NEEDED_LIBS mongodblib ${MONGO_LIBRARIES} ${BOOST_LIBRARIES})
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)
-INCLUDE_DIRECTORIES(leetcode/include)
 INCLUDE_DIRECTORIES(hellomongodb/include)
+INCLUDE_DIRECTORIES(leetcode/include)
 INCLUDE_DIRECTORIES(utils/include)
 # Includes, please keep sorted
 
@@ -188,8 +188,8 @@ INCLUDE_DIRECTORIES(utils/include)
 ADD_SUBDIRECTORY(hello)
 ADD_SUBDIRECTORY(helloc)
 ADD_SUBDIRECTORY(hellolibconfig)
+ADD_SUBDIRECTORY(hellolog4cplus)
 ADD_SUBDIRECTORY(hellomongodb)
 ADD_SUBDIRECTORY(leetcode)
 ADD_SUBDIRECTORY(utils)
 # Applications, please keep sorted
-
