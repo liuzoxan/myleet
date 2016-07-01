@@ -7,3 +7,6 @@ TARGET_LINK_LIBRARIES(remove_duplicates_from_sorted_array ${LEETCODE_NEEDED_LIBS
 
 ADD_EXECUTABLE(quick_sort quick_sort.cpp)
 TARGET_LINK_LIBRARIES(quick_sort ${LEETCODE_NEEDED_LIBS})
+
+ADD_EXECUTABLE(linkedlist_cycle linkedlist_cycle.cpp)
+TARGET_LINK_LIBRARIES(linkedlist_cycle ${LEETCODE_NEEDED_LIBS})
