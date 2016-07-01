@@ -177,10 +177,12 @@ SET(LEETCODE_NEEDED_LIBS leetcodelib ${UTILS_NEEDED_LIBS})
 #MESSAGE("LEETCODE_NEEDED_LIBS=${LEETCODE_NEEDED_LIBS}")
 SET(MONGODB_NEEDED_LIBS mongodblib ${MONGO_LIBRARIES} ${BOOST_LIBRARIES})
 SET(THRIFTSAMPLE_NEEDED_LIBS thriftsamplelib ${THRIFT_LIBRARIES} ${MONGODB_NEEDED_LIBS})
+SET(THRIFTTUTORIAL_NEEDED_LIBS thrifttutoriallib ${THRIFT_LIBRARIES})
 
 # Includes, please keep sorted
 INCLUDE_DIRECTORIES(hello/include)
 INCLUDE_DIRECTORIES(hellomongodb/include)
+INCLUDE_DIRECTORIES(thrifttutorial/include)
 INCLUDE_DIRECTORIES(leetcode/include)
 INCLUDE_DIRECTORIES(utils/include)
 # Includes, please keep sorted
@@ -192,6 +194,7 @@ ADD_SUBDIRECTORY(hellolibconfig)
 ADD_SUBDIRECTORY(hellolog4cplus)
 ADD_SUBDIRECTORY(hellomongodb)
 ADD_SUBDIRECTORY(hellothrift)
+ADD_SUBDIRECTORY(thrifttutorial)
 ADD_SUBDIRECTORY(leetcode)
 ADD_SUBDIRECTORY(utils)
 # Applications, please keep sorted
