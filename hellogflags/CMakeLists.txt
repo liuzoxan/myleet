@@ -1,0 +1,3 @@
+# apps
+ADD_EXECUTABLE(example app/example.cpp)
+TARGET_LINK_LIBRARIES(example ${GFLAGS_LIBRARIES} ${UTILS_NEEDED_LIBS})
