@@ -13,6 +13,12 @@ ADD_EXECUTABLE(hello app/hello.cpp)
 TARGET_LINK_LIBRARIES(hello ${HELLO_NEEDED_LIBS})
 # INSTALL(TARGETS hello DESTINATION bin)
 
+ADD_EXECUTABLE(class_method app/class_method.cpp)
+TARGET_LINK_LIBRARIES(class_method ${HELLO_NEEDED_LIBS})
+
+ADD_EXECUTABLE(move app/move.cpp)
+TARGET_LINK_LIBRARIES(move ${HELLO_NEEDED_LIBS})
+
 #SET(CMAKE_C_FLAGS             "${CMAKE_C_FLAGS}   -fopenmp")
 #SET(CMAKE_CXX_FLAGS           "${CMAKE_CXX_FLAGS} -fopenmp")
 
