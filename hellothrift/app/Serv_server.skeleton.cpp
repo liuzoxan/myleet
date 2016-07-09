@@ -3,7 +3,6 @@
 
 #include <thrift/concurrency/PosixThreadFactory.h>
 #include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TSimpleServer.h>
 #include <thrift/server/TThreadPoolServer.h>
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TBufferTransports.h>
@@ -11,11 +10,10 @@
 #include "../../hellothrift/include/thriftsample/Serv.h"
 #include "mongodb/mongodb.h"
 
-using namespace ::apache::thrift;
-using namespace ::apache::thrift::protocol;
-using namespace ::apache::thrift::transport;
-using namespace ::apache::thrift::concurrency;
-using namespace ::apache::thrift::server;
+using namespace apache::thrift::protocol;
+using namespace apache::thrift::transport;
+using namespace apache::thrift::concurrency;
+using namespace apache::thrift::server;
 
 using boost::shared_ptr;
 
@@ -64,8 +62,8 @@ int main(int argc, char **argv)
     threadManager->start();
 
     // Start
-    TThreadPoolServer server(processor, serverTransport, transportFactory, protocolFactory, threadManager);
-    server.serve();
+    TThreadPoolServer serv(processor, serverTransport, transportFactory, protocolFactory, threadManager, nullptr);
+    serv.serve();
     return 0;
 }
 
